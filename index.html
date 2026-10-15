@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RESHAPED KITCHEN — Custom Kitchen Design & Carpentry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F1EA;--ink:#1A1A1A;--paper:#fff;--line:#D8D3C8;--mute:#6b665b;--block:#1A1A1A;--onblock:#F4F1EA;
+--display:'Anton','Oswald','Arial Narrow',Impact,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15140F;--ink:#F4F1EA;--paper:#F4F1EA;--line:#34312A;--mute:#9a9487;--block:#0A0A09;--onblock:#F4F1EA}}
+:root[data-theme="dark"]{--bg:#15140F;--ink:#F4F1EA;--paper:#F4F1EA;--line:#34312A;--mute:#9a9487;--block:#0A0A09;--onblock:#F4F1EA}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 clamp(20px,4vw,56px)}
+.d{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:-.005em;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;font:600 14px/1 var(--body);letter-spacing:.04em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.pill{border-radius:999px;min-height:42px;padding:0 22px;font-size:12px}
+.link{font:600 14px/1 var(--body);letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:6px}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+.logo{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.links{display:flex;gap:36px;font-size:14px;font-weight:500}
+.links a{padding:6px 0;border-bottom:1px solid transparent}.links a:hover{border-color:currentColor}
+/* hero */
+.hero{padding-top:clamp(28px,5vw,64px)}
+.hero h1{font-size:clamp(56px,15.2vw,236px);white-space:nowrap;text-align:center;margin-bottom:clamp(24px,3vw,44px)}
+.hero-row{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:32px}
+.hero-row p{margin:0;max-width:46ch;font-size:18px}
+.ctas{display:flex;align-items:center;gap:32px;justify-content:flex-end;flex-wrap:wrap}
+.stage{position:relative}
+.ph{position:relative;overflow:hidden;background:#17140f}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.55));pointer-events:none}
+/* simulated photography: millwork, stone, light */
+.k1{background:
+ radial-gradient(ellipse 18% 14% at 30% 8%,rgba(255,214,150,.75),rgba(255,190,110,0) 70%),
+ radial-gradient(ellipse 18% 14% at 62% 8%,rgba(255,214,150,.6),rgba(255,190,110,0) 70%),
+ linear-gradient(180deg,transparent 0 62%,#d9d2c3 62% 65%,#2a1f16 65% 100%),
+ repeating-linear-gradient(90deg,#3a2a1c 0 46px,#2e2116 46px 49px,#44321f 49px 94px,#2e2116 94px 97px);}
+.k2{background:
+ linear-gradient(180deg,transparent 0 58%,#e8e4dc 58% 61%,#bdb6a8 61% 63%,#1d1b18 63% 100%),
+ linear-gradient(95deg,#8a857a 0 8%,transparent 8% 100%),
+ linear-gradient(120deg,#2b2926,#4a463f 40%,#26241f);}
+.k3{background:
+ radial-gradient(ellipse 40% 30% at 70% 20%,rgba(255,200,130,.35),transparent 70%),
+ linear-gradient(180deg,transparent 0 70%,#0b0b0a 70%),
+ repeating-linear-gradient(90deg,#161512 0 70px,#0d0c0b 70px 73px);}
+.k4{background:
+ radial-gradient(ellipse 30% 22% at 50% 10%,rgba(255,220,170,.6),transparent 70%),
+ linear-gradient(180deg,transparent 0 60%,#cfc7b6 60% 63%,#3b2a1b 63% 100%),
+ repeating-linear-gradient(90deg,#4b3624 0 28px,#3b2a1b 28px 30px);}
+.hero .ph{aspect-ratio:21/9;min-height:280px}
+.inset{position:absolute;right:clamp(12px,2vw,28px);bottom:clamp(12px,2vw,28px);width:clamp(120px,18vw,260px);aspect-ratio:4/3;border:6px solid var(--paper);z-index:2}
+.cap{position:absolute;left:20px;bottom:18px;z-index:2;color:#F4F1EA;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+/* philosophy */
+.sec{padding:clamp(64px,9vw,128px) 0}
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:stretch}
+.intro .copy{display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.intro h2{font-size:clamp(40px,6vw,88px)}
+.intro p{font-size:19px;max-width:52ch;margin:0 0 28px;color:var(--mute)}
+.intro .ph{min-height:520px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(56px,8vw,112px);border-top:1px solid var(--ink)}
+.stat{padding:28px 24px 0 0}
+.stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
+.stat b{display:block;font:400 clamp(56px,9.5vw,148px)/.95 var(--display);letter-spacing:-.01em}
+.stat span{display:block;margin-top:14px;font-size:14px;color:var(--mute);max-width:26ch}
+/* work */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.head h2{font-size:clamp(44px,7vw,108px)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{position:relative;aspect-ratio:3/4.4;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#F4F1EA}
+.card .t,.card p{position:relative;z-index:2}
+.card h3{font:400 24px/1.05 var(--display);text-transform:uppercase;margin:0 0 8px;letter-spacing:.01em}
+.card p{margin:0;font-size:13px;line-height:1.5;color:#dcd6c8}
+.badge{position:absolute;top:16px;right:16px;z-index:2;width:36px;height:36px;border:1px solid rgba(244,241,234,.7);display:grid;place-items:center}
+/* process */
+.band{background:var(--block);color:var(--onblock);padding:clamp(64px,9vw,120px) 0}
+.band h2{font-size:clamp(40px,6.4vw,96px);max-width:12ch;margin-bottom:56px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #4a463e}
+.col{padding:32px 32px 8px 0}
+.col+.col{padding-left:32px;border-left:1px solid #4a463e}
+.col .n{font:400 20px var(--display);color:#9a9487;letter-spacing:.06em}
+.col h3{font:400 clamp(40px,5vw,72px)/1 var(--display);text-transform:uppercase;margin:12px 0 16px}
+.col p{margin:0;max-width:34ch;color:#cfc9bb}
+/* estimate */
+.est{position:relative;color:#F4F1EA;padding:clamp(56px,8vw,112px) 0;overflow:hidden;background:#100e0b}
+.est .bg{position:absolute;inset:0;background:
+ radial-gradient(ellipse 30% 24% at 22% 14%,rgba(255,200,130,.35),transparent 70%),
+ linear-gradient(180deg,transparent 0 66%,#a39b8a 66% 68%,#0a0908 68% 100%),
+ repeating-linear-gradient(90deg,#1c1913 0 90px,#12100c 90px 93px)}
+.est .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,6vw,96px);align-items:center}
+.est h2{font-size:clamp(52px,9vw,148px)}
+.glass{background:rgba(16,14,11,.62);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid rgba(244,241,234,.28);padding:clamp(24px,3vw,40px)}
+.glass h3{font:400 28px/1 var(--display);text-transform:uppercase;margin:0 0 24px;letter-spacing:.02em}
+.f{display:block;margin-bottom:16px}
+.f span{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;color:#cfc9bb}
+.f input,.f select,.f textarea{width:100%;min-height:46px;padding:10px 12px;background:rgba(0,0,0,.35);color:#F4F1EA;border:1px solid rgba(244,241,234,.35);border-radius:0;font:400 15px var(--body);appearance:none;-webkit-appearance:none}
+.f select{background-image:linear-gradient(45deg,transparent 50%,#F4F1EA 50%),linear-gradient(135deg,#F4F1EA 50%,transparent 50%);background-position:calc(100% - 19px) 20px,calc(100% - 14px) 20px;background-size:5px 5px;background-repeat:no-repeat}
+.f option{color:#1A1A1A}
+.f textarea{min-height:96px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid #F4F1EA;outline-offset:1px}
+.btn.w{width:100%;background:#fff;color:#1A1A1A;border-color:#fff;min-height:54px}
+.btn.w:hover{background:transparent;color:#fff}
+.ok{display:none;margin:14px 0 0;font-size:14px}
+/* footer */
+footer{background:var(--bg);border-top:1px solid var(--ink);padding:clamp(56px,7vw,96px) 0 32px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(32px,6vw,96px)}
+footer .logo{font-size:clamp(32px,4.5vw,56px);line-height:.95;display:block;margin-bottom:20px;white-space:normal}
+footer p{color:var(--mute);max-width:46ch;margin:0 0 28px}
+.news{display:flex;max-width:520px;border:1px solid var(--ink)}
+.news input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);padding:0 16px;font:400 15px var(--body)}
+.news input:focus-visible{outline-offset:-3px}
+.news .btn{border:0;padding:0 20px}
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.fl h4{margin:0 0 14px;font:600 12px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.fl a{display:block;padding:5px 0}.fl a:hover{text-decoration:underline}
+.soc{display:flex;gap:10px;margin-top:8px}
+.soc a{width:42px;height:42px;border:1px solid var(--ink);display:grid;place-items:center}
+.soc a:hover{background:var(--ink);color:var(--bg)}
+.base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--mute)}
+@media (max-width:980px){
+ .links{display:none}
+ .hero-row,.intro,.est .wrap,.fg{grid-template-columns:1fr}
+ .ctas{justify-content:flex-start}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .intro .ph{min-height:420px}
+}
+@media (max-width:640px){
+ nav .btn{padding:0 14px;font-size:11px}
+ .logo{font-size:17px}
+ .hero h1{white-space:normal;font-size:clamp(64px,22vw,120px)}
+ .stats,.cols{grid-template-columns:1fr}
+ .stat,.stat+.stat,.col,.col+.col{padding-left:0;border-left:0}
+ .stat+.stat,.col+.col{border-top:1px solid var(--line);margin-top:24px;padding-top:24px}
+ .col+.col{border-top-color:#4a463e}
+ .grid{grid-template-columns:1fr}
+ .card{aspect-ratio:4/5}
+ .fl{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap">
+  <a class="logo" href="#home">Reshaped Kitchen</a>
+  <div class="links">
+   <a href="#home">Home</a><a href="#services">Services</a><a href="#features">Features</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn pill" href="#contact">Book a Studio Consultation</a>
+ </div>
+</nav>
+
+<header class="hero wrap" id="home">
+ <h1 class="d">Reshaped Kitchen</h1>
+ <div class="hero-row">
+  <p>Bespoke cabinetry, hand-milled hardwood and honed natural stone, drawn and built as one composition. We design kitchens that are made to be lived in for decades.</p>
+  <div class="ctas"><a class="btn" href="#contact">Start Your Project</a><a class="link" href="#process">Our Process →</a></div>
+ </div>
+ <div class="stage">
+  <div class="ph k1" role="img" aria-label="Warm walnut kitchen with brass pendant lighting and a stone counter"></div>
+  <div class="ph k2 inset" role="img" aria-label="Project thumbnail: stone kitchen"></div>
+  <span class="cap">Walnut Residence, Warsaw</span>
+ </div>
+</header>
+
+<section class="sec wrap" id="services">
+ <div class="intro">
+  <div class="copy">
+   <h2 class="d">Joinery drawn to the millimetre</h2>
+   <div>
+    <p>High-end custom kitchen renovations, bespoke cabinetry, premium stone counter integration and architectural lighting, delivered by one studio from first sketch to final sign-off.</p>
+    <a class="btn" href="#contact">Start Your Project</a>
+   </div>
+  </div>
+  <div class="ph k3" role="img" aria-label="Tall portrait of a dark minimalist kitchen"></div>
+ </div>
+ <div class="stats" id="features">
+  <div class="stat"><b>120+</b><span>Completed architectural renovations</span></div>
+  <div class="stat"><b>$5.35M</b><span>Custom joinery and stone volume installed</span></div>
+  <div class="stat"><b>$93.3M</b><span>Combined property value enhanced</span></div>
+ </div>
+</section>
+
+<section class="wrap" id="projects" style="padding-bottom:clamp(64px,9vw,128px)">
+ <div class="head">
+  <h2 class="d">Recent work<br>Featured spaces</h2>
+  <a class="link" href="#contact">Request the full portfolio →</a>
+ </div>
+ <div class="grid">
+  <article class="card ph k1"><span class="badge" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F4F1EA" stroke-width="1.2"><path d="M1 15V1h14M1 8h7v7"/></svg></span><div class="t"><h3>Modern Warm Minimalist Kitchen</h3></div><p>Rift-cut walnut, concealed handles and a single brass pendant line.</p></article>
+  <article class="card ph k2"><span class="badge" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F4F1EA" stroke-width="1.2"><path d="M1 1h14v14H1zM1 8h14"/></svg></span><div class="t"><h3>Contemporary Stone Kitchen</h3></div><p>A 40 mm honed limestone island, mitred and book-matched.</p></article>
+  <article class="card ph k3"><span class="badge" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F4F1EA" stroke-width="1.2"><path d="M8 1v14M1 8h14"/></svg></span><div class="t"><h3>Dark Tone Luxury Kitchen</h3></div><p>Matte black lacquer, smoked oak and recessed shadow-gap lighting.</p></article>
+  <article class="card ph k4"><span class="badge" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#F4F1EA" stroke-width="1.2"><path d="M1 15 15 1M1 1h14v14"/></svg></span><div class="t"><h3>Walnut Gallery Kitchen</h3></div><p>A full-height wall of millwork hiding appliances, pantry and bar.</p></article>
+ </div>
+</section>
+
+<section class="band" id="process">
+ <div class="wrap">
+  <h2 class="d">How we reshape your kitchen</h2>
+  <div class="cols">
+   <div class="col"><span class="n">01</span><h3>Design</h3><p>Precision 3D CAD modeling and bespoke layout planning, reviewed with you before any material is cut.</p></div>
+   <div class="col"><span class="n">02</span><h3>Craft</h3><p>Premium natural stone, hand-milled hardwood and custom joinery built in our own workshop.</p></div>
+   <div class="col"><span class="n">03</span><h3>Delivery</h3><p>End-to-end site management, installation and a final sign-off walk-through.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="est" id="contact">
+ <div class="bg" aria-hidden="true"></div>
+ <div class="wrap">
+  <h2 class="d">Kitchens reshaped with intent</h2>
+  <form class="glass" id="est" novalidate>
+   <h3>Get a free estimate</h3>
+   <label class="f"><span>Full name</span><input name="name" type="text" autocomplete="name" required></label>
+   <label class="f"><span>Phone number</span><input name="phone" type="tel" autocomplete="tel" required></label>
+   <label class="f"><span>Service type</span><select name="service" required><option value="">Select a service</option><option>Full kitchen renovation</option><option>Bespoke cabinetry</option><option>Stone countertops</option><option>Design only</option></select></label>
+   <label class="f"><span>Budget</span><select name="budget" required><option value="">Select a budget</option><option>Under $30k</option><option>$30k – $60k</option><option>$60k – $120k</option><option>$120k+</option></select></label>
+   <label class="f"><span>Message</span><textarea name="msg" placeholder="Tell us about the space and timeline"></textarea></label>
+   <button class="btn w" type="submit">Get Free Estimate</button>
+   <p class="ok" id="ok" role="status">Thank you. We will call you within one working day.</p>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="fg">
+   <div>
+    <a class="logo" href="#home">Reshaped Kitchen</a>
+    <p>A design and carpentry studio for private residences. We draw, mill and install every kitchen ourselves.</p>
+    <form class="news" onsubmit="event.preventDefault();this.querySelector('input').value='';">
+     <input type="email" aria-label="Email address" placeholder="Enter your email to start your project">
+     <button class="btn" type="submit">Start Your Project</button>
+    </form>
+   </div>
+   <div class="fl">
+    <div><h4>Studio</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#features">About Us</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+    <div><h4>Follow</h4>
+     <div class="soc">
+      <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+      <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 9v11M4 4v1M9 20V9m0 5c0-3 2-5 5-5s4 2 4 5v6"/></svg></a>
+      <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 21l2-9M8 11c0-3 2-5 5-5s5 2 5 4-1 5-4 5c-2 0-3-1-3-1"/></svg></a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="base"><span>© 2026 Reshaped Kitchen Studio</span><span>Custom kitchens, joinery and stone</span></div>
+ </div>
+</footer>
+
+<script>
+document.getElementById('est').addEventListener('submit',function(e){
+ e.preventDefault();
+ var ok=true;
+ this.querySelectorAll('[required]').forEach(function(f){if(!f.value.trim()){ok=false;}});
+ var m=document.getElementById('ok');
+ m.style.display='block';
+ m.textContent=ok?'Thank you. We will call you within one working day.':'Please fill in your name, phone, service type and budget.';
+ if(ok)this.reset();
+});
+</script>
+</body>
+</html>
